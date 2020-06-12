@@ -11,7 +11,7 @@ class RingBuffer:
         # check to see if the list is completely full
         if len(self.storage) < self.capacity:
             self.storage.add_to_tail(item)
-            self.current = self.storage.head  # check where head is initialized
+            self.current = self.storage.head
         else:
             if not self.current.next:
                 self.current.value = item
